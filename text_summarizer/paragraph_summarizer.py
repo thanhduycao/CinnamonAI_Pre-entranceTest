@@ -1,5 +1,5 @@
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-from fastT5 import get_onnx_model
+from text_summarizer.models.onnx_t5 import get_onnx_model
 import torch
 import argparse
 import time
@@ -29,11 +29,12 @@ class ParagraphSummarizer:
         """Inference summarize the input text sequence"""
         encoding = self.tokenizer(text_seq, return_tensors="pt")
 
+        t1 = time.time()
         generated_ids = self.model.generate(
             input_ids=encoding["input_ids"],
             attention_mask=encoding["attention_mask"],
-            num_beams=num_beams,
             max_length=max_length,
+            num_beams=num_beams,
             repetition_penalty=repetition_penalty,
             length_penalty=length_penalty,
             early_stopping=early_stopping,
