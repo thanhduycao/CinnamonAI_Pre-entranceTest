@@ -5,11 +5,7 @@ import argparse
 import time
 
 MODEL_NAME = "VietAI/vit5-base-vietnews-summarization"
-MODEL_PATH = "models/vit5-base-vietnews-summarization"
-
-use_gpu = torch.cuda.is_available()
-device = torch.device("cuda" if use_gpu else "cpu")
-print(device)
+MODEL_PATH = "models/vit5-quantized-model"
 
 
 class ParagraphSummarizer:
@@ -17,10 +13,7 @@ class ParagraphSummarizer:
 
     def __init__(self) -> None:
         self.tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-        self.model = get_onnx_model(
-            model_name=MODEL_NAME, onnx_models_path=MODEL_PATH, quantized=False
-        )
-        # self.model.to(device)
+        self.model = get_onnx_model(model_name=MODEL_NAME, onnx_models_path=MODEL_PATH)
         self.model.eval()
 
     @torch.no_grad()
