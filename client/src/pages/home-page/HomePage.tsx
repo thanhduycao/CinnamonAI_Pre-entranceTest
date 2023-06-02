@@ -15,7 +15,8 @@ const useStyles = makeStyles({
   summarizerGrid: {
     height: '80%',
     paddingLeft: '5rem',
-    paddingRight: '5rem'
+    paddingRight: '5rem',
+    paddingTop: '2rem',
   }
 })
 

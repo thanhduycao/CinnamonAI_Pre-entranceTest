@@ -4,8 +4,8 @@ import { makeStyles } from '@mui/styles'
 
 export const NavBar = () => {
   return (
-    <AppBar position="static" sx={{ backgroundColor: "white", color: "black" }}>
-      <h1>SummarizerBot</h1>
+    <AppBar position="static" sx={{ backgroundColor: "white", color: "black", alignItems: "center" }}>
+      <h2>SummarizerBot 🤖</h2>
     </AppBar>
   )
 }
