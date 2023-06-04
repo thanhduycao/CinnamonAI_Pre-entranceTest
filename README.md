@@ -61,6 +61,7 @@ The project was run on follow requirements:
 
 #### Server
 - Make sure you have install python: https://www.python.org/downloads/
+- You need to download the foler model from [link](https://drive.google.com/drive/folders/1gV6JBp8q1hwnk2p5gjJ_MhKE1lZyr6ru?usp=sharing) and put in the *models/* to make the folder structure like this *models/vit5-quantized-model/...*
 - Go to the server folder: `cd server`
 - You can create a virtual environment for the project: `python -m venv venv`
 - Activate the virtual environment: `source venv/bin/activate`
