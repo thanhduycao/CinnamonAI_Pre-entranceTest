@@ -32,7 +32,7 @@ def get_onnx_runtime_sessions(
     opt_level: int = 99,
     parallel_exe_mode: bool = True,
     n_threads: int = 0,
-    provider=["CUDAExecutionProvider"],
+    provider=["CUDAExecutionProvider", "CPUExecutionProvider"],
 ) -> InferenceSession:
     """
             Optimizes the model
