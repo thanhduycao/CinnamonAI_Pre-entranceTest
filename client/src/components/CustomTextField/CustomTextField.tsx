@@ -15,7 +15,7 @@ const NoneOutlinedTextField = styled(TextField)({
         },
     },
     width: "100%",
-    maxHeight: "100%",
+    maxHeight: "85%",
     overflowY: "auto",
 })
 
