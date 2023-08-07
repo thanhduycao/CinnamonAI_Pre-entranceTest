@@ -1,4 +1,4 @@
-# CinnamonAI_Pre-entranceTest
+# Summerizer Tool
 ## Introduction
 Being inspiration by the needs of capturing the core information of a document when there are a lot of things that we need to read everyday, I decided to buil a summarization tool that can help us to do that. This tool will help us to summarize the content of a document into a few sentences that can capture the most value information, as well as showing top keywords of the document. This tool will be built by using the ViT5 pretrained model, as well as DistilBert multilingual pretrained model for the embedding extraction.
 
